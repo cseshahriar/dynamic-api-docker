@@ -1,15 +1,15 @@
-name: Basic CI
+name: Basic CI  # Workflow name
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # Trigger workflow when pushing to main branch
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
+  hello:  # Job name
+    runs-on: ubuntu-latest  # Use GitHub Ubuntu runner
     steps:
       - name: Code checkout
-        uses: actions/checkout@v4
-      - name: Print
-        run: echo "Hello from Basic CI pipeline"
+        uses: actions/checkout@v4  # Checkout repository code, It copies your GitHub project into the workflow environment.
 
+      - name: Print
+        run: echo "Hello from Basic CI pipeline"  # Print text to workflow log
